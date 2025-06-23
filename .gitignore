@@ -1,0 +1,16 @@
+# Node modules
+front/node_modules/
+server/node_modules/
+
+# Environment variables
+front/.env
+server/.env
+
+# Build output
+front/dist/
+server/dist/
+
+# System files
+.vscode/
+*.log
+.DS_Store
