@@ -7,6 +7,7 @@ import  Footer  from './components/Footer';
 import Home from './pages/Home';
 import SignIn from './pages/SignIn';
 import Register from './pages/register';
+
 import Efiling from './pages/IncomeTax/Efiling';
 import IncomeTax2 from './pages/IncomeTax/IncomeTax2';
 import IncomeTax3 from './pages/IncomeTax/IncomeTax3';
@@ -20,6 +21,9 @@ import IncomeTax10 from './pages/IncomeTax/IncomeTax10';
 import IncomeTax11 from './pages/IncomeTax/IncomeTax11';
 import IncomeTax12 from './pages/IncomeTax/IncomeTax12';
 import IncomeTax13 from './pages/IncomeTax/IncomeTax13';
+
+import Gst1 from './pages/GST/Gst1.jsx';
+
 
 
 function App() {
@@ -44,6 +48,12 @@ function App() {
            <Route  path={"/incometax12"}  element={<IncomeTax12 />}/>
            <Route  path={"/incometax13"}  element={<IncomeTax13 />}/>
            
+
+          {/* GST */}
+          < Route  path={"/gst1"}  element={< Gst1/>}/>        
+          
+
+
            <Route  path="/signIn"  element={<SignIn/>}/>
            <Route  path="/register"  element={<Register/>}/>
       

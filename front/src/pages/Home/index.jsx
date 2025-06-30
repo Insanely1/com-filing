@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <>
    
-    <div>
+    <div  className=' lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto' >
     
        <Banner/>
        <FeaturesSectionDemo/>

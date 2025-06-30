@@ -48,9 +48,11 @@ const Footer = () => {
               <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
                 className='link'>   </Link> </li>
               <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
-                className='link'> Policy  </Link> </li>
+                className='link'> Privacy Policy  </Link> </li>
               <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
                 className='link'> Terms and conditions  </Link> </li>
+                <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
+                className='link'> Disclaimer </Link> </li>
               <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
                 className='link'> About us  </Link> </li>
 
@@ -90,8 +92,8 @@ const Footer = () => {
           </div>
 
         </div>
-
-      </footer>
+  </footer>
+   
       <span className="text-sm md:text-base font-medium  text-black">
         © 2025 Comfiling. All rights reserved.
       </span>
@@ -102,7 +104,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-
+ 
     </>
   );
 };
