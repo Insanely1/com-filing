@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './style.css'; // Ensure this path is correct
 import { Link } from 'react-router-dom';
 import { FaFacebookF } from "react-icons/fa6";
@@ -6,7 +6,33 @@ import { IoLogoYoutube } from "react-icons/io";
 import { CiTwitter } from "react-icons/ci";
 
 
+
+
 const Footer = () => {
+
+    // ✅ Visit counter logic inside Footer
+  const [count, setCount] = useState(0);
+
+
+useEffect(() => {
+
+   localStorage.removeItem("visitCount");
+  const storedCount = localStorage.getItem("visitCount");
+ 
+
+  if (storedCount) {
+    const newCount = parseInt(storedCount) + 1;
+    setCount(newCount);
+    localStorage.setItem("visitCount", newCount);
+  } else {
+    // Start from 1000 on first time
+    const initialCount = 1851;
+    setCount(initialCount);
+    localStorage.setItem("visitCount", initialCount);
+  }
+}, []);
+
+   const countDigits = count.toString().split('');
   return (
 
     <>
@@ -18,7 +44,7 @@ const Footer = () => {
             MOHAN GARDEN, UTTAM NAGAR, NEW DELHI-110059</p>
 
           <Link className="link" to="mailto:support@biz-ebooks.com">Support@biz-ebooks.com</Link>
-          <span className='text-[25px] font-600 block w-full text-red' >(+91) 11 7428355500 </span>
+          <span className='text-[15px] font-600 block  text-red' >(+91) 11 7428355500 </span>
 
           www.biz-ebooks.com
 
@@ -47,19 +73,35 @@ const Footer = () => {
             <ul className='list'>
               <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
                 className='link'>   </Link> </li>
-              <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
+              <li className='list-none text-[14px] w-full mb-2  '> <Link to="/privacy"
                 className='link'> Privacy Policy  </Link> </li>
-              <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
+              <li className='list-none text-[14px] w-full mb-2  '> <Link to="/terms"
                 className='link'> Terms and conditions  </Link> </li>
-                <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
+                <li className='list-none text-[14px] w-full mb-2  '> <Link to="/disclaimer"
                 className='link'> Disclaimer </Link> </li>
-              <li className='list-none text-[14px] w-full mb-2  '> <Link to="/"
+              <li className='list-none text-[14px] w-full mb-2  '> <Link to="aboutus"
                 className='link'> About us  </Link> </li>
 
             </ul>
           </div>
-
+           {/* Right: Visit Counter column */}
+            {/* Visit counter column */}
+            <div className="w-[32%] flex flex-col justify-center items-center p-4  text-black rounded-lg shadow-md">
+            <h2 className="text-lg font-bold mb-2 text-white">Visit Counter</h2>
+            <div className="flex space-x-1">
+              {countDigits.map((digit, index) => (
+                <div
+                  key={index}
+                  className="w-8 h-10 bg-gray-100 border border-gray-300 rounded flex justify-center items-center text-lg font-semibold"
+                >
+                  {digit}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
+    
+      
 
         <div className=" px-4  justify-between items-center gap-4">
 
@@ -93,7 +135,7 @@ const Footer = () => {
 
         </div>
   </footer>
-   
+
       <span className="text-sm md:text-base font-medium  text-black">
         © 2025 Comfiling. All rights reserved.
       </span>

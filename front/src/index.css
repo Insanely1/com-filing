@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
 
 /* index.css */
 * {
@@ -6,8 +7,27 @@
 }
 body{
   background: #fcfcfc ;
+    font-family: 'Roboto', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
 
  
 .signInPage {
@@ -58,3 +78,10 @@ body{
   width: 500px;
 }
 
+.footer-custom-bg {
+  background-color: #0e3a83;
+}
+
+.list{
+  text-size-adjust: 200px;
+}

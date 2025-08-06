@@ -4,7 +4,8 @@ import authMiddleware from '../middlewares/authmiddleware.js';
 
 const userRouter = Router()
 
-userRouter.post('/register', registerUserController);
+//await axios.post('http://localhost:8000/api/user/register', formFields);
+userRouter .post('/register', registerUserController); // Register user
 userRouter.post('/verifyEmail',verifyEmailController);
 userRouter.post('/login', loginUserController);
 userRouter.get('/logout' ,authMiddleware,logoutUserController ) ;// Assuming login is handled by the same controller for now

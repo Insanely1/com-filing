@@ -82,7 +82,7 @@ export const ImagesSlider = ({
     visible: {
       scale: 1,
       rotateX: 0,
-      opacity: 1,
+      opacity: 1  ,
       transition: {
         duration: 0.5,
         ease: [0.645, 0.045, 0.355, 1.0],
@@ -117,7 +117,7 @@ export const ImagesSlider = ({
       }}>
       {areImagesLoaded && children}
       {areImagesLoaded && overlay && (
-        <div className={cn("absolute inset-0 bg-black/60 z-40", overlayClassName)} />
+        <div className={cn("absolute inset-0 bg-black/20 z-40", overlayClassName)} />
       )}
       {areImagesLoaded && (
         <AnimatePresence>
@@ -128,7 +128,7 @@ export const ImagesSlider = ({
             animate="visible"
             exit={direction === "up" ? "upExit" : "downExit"}
             variants={slideVariants}
-            className="image h-full w-full absolute inset-0 object-cover object-center" />
+            className="image h-full w-full absolute inset-0 object-cover  object-center" />
         </AnimatePresence>
       )}
     </div>

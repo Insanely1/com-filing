@@ -1,5 +1,18 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
 
+.akaya-kanadaka-regular {
+  font-family: "Akaya Kanadaka", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.molle-regular-italic {
+  font-family: "Molle", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
 /* style.css */
 .header-custom-bg {
   background-color: #0e3a83;

@@ -23,6 +23,12 @@ import IncomeTax12 from './pages/IncomeTax/IncomeTax12';
 import IncomeTax13 from './pages/IncomeTax/IncomeTax13';
 
 import Gst1 from './pages/GST/Gst1.jsx';
+import Gst2 from './pages/GST/Gst2.jsx';
+import Gst3 from './pages/GST/Gst3.jsx';
+import Aboutus from './pages/aboutus.jsx';
+import Privacy from './pages/privacy.js';
+import Terms from './pages/Terms.jsx';
+import Disclaimer from './pages/Disclaimer.jsx';
 
 
 
@@ -50,13 +56,22 @@ function App() {
            
 
           {/* GST */}
-          < Route  path={"/gst1"}  element={< Gst1/>}/>        
+          < Route  path={"/gst1"}  element={< Gst1/>}/> 
+          < Route  path={"/gst2"}  element={< Gst2/>}/>     
+          < Route  path={"/gst3"}  element={< Gst3/>}/>     
+                
           
-
-
+            
+          <Route  path="/aboutus"  element={<Aboutus/>}/>
            <Route  path="/signIn"  element={<SignIn/>}/>
            <Route  path="/register"  element={<Register/>}/>
-      
+           
+            <Route  path="/privacy"  element={<Privacy/>}/>
+            <Route  path="/terms"  element={<Terms/>}/>
+            <Route  path="/disclaimer"  element={<Disclaimer/>}/>
+            <Route  path="/privacy"  element={<Privacy/>}/>
+
+           
       </Routes>
       
         <Footer/>

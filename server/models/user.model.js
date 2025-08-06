@@ -18,10 +18,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Please provide a password"],
     },
-    phone: {
-      type: String,
-      required: [true, "Please provide a phone number"],
-    },
+  
     avatar: {
       type: String,
       default: "",
@@ -63,7 +60,7 @@ const userSchema = new mongoose.Schema(
 userSchema.pre("save", function (next) {
   if(!this.isModified("password")) {
   next();}
-  this.password = bcrypt.hashSync(this.password, 10);
+ 
 });
 
 userSchema.methods.comparePassword = async function (enteredpassword) {

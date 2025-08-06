@@ -5,24 +5,30 @@ import Box from '@mui/material/Box';
 import  { useState } from 'react';
 import './style.css';
 
+
+
+
+
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <>
+  <>
+    
       <header className="fixed top-0 left-0 w-full z-50 header-custom-bg " >
-        <div className='container flex intems-center justify-between gap-5 text-white '>
+        <div className=' h-16 container flex items-center justify-between gap-5 text-white '>
 
           <div className=' w-[15%] flex items-center ' >
 
             {/* <Link to="/"><img src="" className="w-15 h-auto" /> </Link> */}
-            <span class=" font-semibold text-lg">COMFILING</span>
+            <span class=" molle-regular-italic ml-5 font-semibold text-lg">Comfiling</span>
           </div>
     
 
           <div className='col2 w-[100%] font-serif' >
             <ul className='flex items-center  gap-5 text-white mt-5 '>
                {/* Hamburger icon */}
-        <div className="block lg:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+         <div className="block lg:hidden cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
           <svg
             className="w-8 h-8"
             fill="none"
@@ -92,30 +98,41 @@ const Header = () => {
               
               <li className='relative group '>
                      <span className="cursor-pointer text-[18px] font-medium cursor-pointer">Goods and Services Tax</span>
-                <ul className="absolute hidden group-hover:grid grid-cols-2 gap-1  bg-white text-black mt-1 rounded-md shadow-lg min-w-[20rem] z-50">
+                <ul className="absolute hidden group-hover:grid grid-cols-2 gap-1  bg-white text-black mt-1 rounded-md shadow-lg min-w-[30rem] z-50">
                         
                   <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">GST Registration</Link></li>
                    <li><Link to="/gst2" className="block px-3 py-2 hover:bg-gray-100">GST Return Filing</Link> </li>
-                    <li><Link to="/efiling" className="block px-3 py-2 hover:bg-gray-100">GST Registration for Foreigners</Link></li>
-                    <li><Link to="/efiling" className="block px-3 py-2 hover:bg-gray-100">GST Annual Return Filing </Link></li>
-                    <li><Link to="/efiling" className="block px-3 py-2 hover:bg-gray-100">GST Registration Amendment</Link></li>
-                    <li><Link to="/efiling" className="block px-3 py-2 hover:bg-gray-100">GST E-Invoicing Software</Link></li>
-                    <li><Link to="/efiling" className="block px-3 py-2 hover:bg-gray-100">GST Revocation</Link></li>
-                    <li><Link to="/efiling" className="block px-3 py-2 hover:bg-gray-100">GST LUT Form</Link></li>
-                    <li><Link to="/efiling" className="block px-3 py-2 hover:bg-gray-100">GSTR - 10</Link></li>
-                    <li><Link to="/efiling" className="block px-3 py-2 hover:bg-gray-100">GST Tax Notice</Link></li>
+                    <li><Link to="/gst3" className="block px-3 py-2 hover:bg-gray-100">GST Registration for Foreigners</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">GST Annual Return Filing </Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">GST Registration Amendment</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">GST E-Invoicing Software</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">GST Revocation</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">GST LUT Form</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">GSTR - 10</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">GST Tax Notice</Link></li>
 
                  </ul>
               </li>
              
+                 <li className='relative group '>
+                     <span className="cursor-pointer text-[18px] font-medium cursor-pointer">Compliance</span>
+                <ul className="absolute hidden group-hover:grid grid-cols-2 gap-1  bg-white text-black mt-1 rounded-md shadow-lg min-w-[25rem] z-50">
+                        
+                  <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">FDI filing with RBI</Link></li>
+                   <li><Link to="/gst2" className="block px-3 py-2 hover:bg-gray-100">FLA Return Filing</Link> </li>
+                    <li><Link to="/gst3" className="block px-3 py-2 hover:bg-gray-100">FSSAI Renewal</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">FSSAI Return Filing </Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">Business Plan</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">HR and Payroll Service</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">PF Return Filing</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">ESI Return Filing</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">Proprietorship Compliance</Link></li>
+                    <li><Link to="/gst1" className="block px-3 py-2 hover:bg-gray-100">Bookkeeping Services</Link></li>
 
+                 </ul>
+              </li>
+              
 
-              <li className='list none  '>
-                <Link to="/" className='link transition text-[18px] font-[500]'>MCA</Link>
-              </li>
-              <li className='list none  '>
-                <Link to="/" className='link transition text-[18px] font-[500]'>Compliance</Link>
-              </li>
               <li className='list none  '>
                 <Link to="/" className='link transition text-[18px] font-[500]'>Trademark</Link>
               </li>
@@ -128,8 +145,10 @@ const Header = () => {
               <li className='list none  '>
                 <Link to="/" className='link transition text-[18px] font-[500]'> Pricing</Link>
               </li>
+
+
               <li className='list none  '>
-                <Link to="/" className='link transition text-[18px] font-[500]'> About Us</Link>
+                <Link to="/aboutus" className='link transition text-[18px] font-[500]'> About Us</Link>
               </li>
 
 
@@ -153,8 +172,14 @@ const Header = () => {
 
 
         </div>
+
+
+         
       </header>
-    </>
+
+ 
+
+  </>
   )
 }
 

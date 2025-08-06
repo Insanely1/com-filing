@@ -77,40 +77,35 @@ const content = [
   },
 ];
 
+
 const images = [
-  "HeroSection1.jpg",
-  "https://images.unsplash.com/photo-1483982258113-b72862e6cff6?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "h1.jpg",
+  "HeroSection2.jpg",
   "https://images.unsplash.com/photo-1482189349482-3defd547e0e9?q=80&w=2848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 ];
-
 
 
 export function Banner() {
 
   return (
     <>
+
+      <div className="relative mt-12 z-10 py-10 max-w-7xl mx-auto px-4 lg:px-8 ">
+  <ImagesSlider className="h-[85vh] w-full rounded-lg overflow-hidden" images={images}>
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 0, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="z-50 flex flex-col justify-center items-center"
+    >
+      <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+        {/* Your text here */}
+      </motion.p>
+    </motion.div>
+  </ImagesSlider>
+</div>
       <br />
-
-<br/>
-      <ImagesSlider className="h-[85vh]" images={images}>
-
-        <motion.div
-          initial={{ opacity: 0, y: -50, }}
-          animate={{ opacity: 1, y: 0, }}
-          transition={{ duration: 0.6, }}
-          className="z-50 flex flex-col justify-center items-center"
-        >
-          <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
-
-          </motion.p>
-          {/* <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">
-            {/* <span>quik books</span> */}
-            {/* <div className="absolute inset-x-0  h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-emerald-500 to-transparent" />
-          </button> */} 
-        </motion.div>
-      </ImagesSlider>
-
-
+       <br/>
       <div className="flex  mx-auto px-4 py-8 gap-8">
         {/* Left: Image */}
         <div className="w-1/3  flex items-center justify-center">
